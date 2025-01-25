@@ -5,7 +5,7 @@ const weather = document.getElementById("weather")
 const temp = document.getElementById("temp")
 const image = document.getElementById("wimg")
 const fetchdata = async() =>{
-    let data = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${cityname.value}&aqi=yes`)
+    let data = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${cityname.value}&aqi=yes`)
     let response = await data.json()
     weather.innerText = `${response.current.condition.text}`
     if(response.current.condition.text=="Partly cloudy" || response.current.condition.text=="cloudy"){
